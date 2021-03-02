@@ -1,0 +1,303 @@
+a{
+    text-decoration: none;
+    margin: 10px; 
+    color: black;
+}
+main{
+    background-color: rgba(255, 255, 0, 0.37);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.flex{
+    display: flex;
+}
+.flex50{
+    width: 50%;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.contacto{
+    justify-content: flex-end;
+    /*esta linea especifica la altura a la que se coloca el texto o el elemento*/
+    line-height: 60px;
+}
+.icono-menu{
+    /*esta linea especifica la altura a la que se coloca el texto o el elemento*/
+    line-height: 35px;
+    margin: 15px;
+    /*esta linea cambia el cursor a la manito*/
+    cursor: pointer;
+}
+.icono-redes{
+    font-size: 40px;
+    display: inline;
+    
+}
+.icono-redes [class*="icono-"]:before{
+    line-height: 55px;
+    border-radius: 7em;
+    padding: 7px;
+    
+}
+.menu{
+    z-index: 500;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(166, 255, 0, 0.63);
+    
+}
+/*--------------Lista del menu-------------*/
+.Lista-menu{
+    flex-direction: column;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: #000000b2;
+    text-align: center;
+    /*estas dos lineas es para desaparecer el menu*/
+    height: 0;
+    overflow: hidden;
+    /*esta linea crea una animacion*/
+    transition: 1.2s cubic-bezier(0.2, 4, 0.1756, 1);
+}
+.seleccionado{
+    background-color: white;
+    display: block;
+    margin: 10px;
+    padding: 0;
+    /*esta linea coloca una sombra*/
+    box-shadow: -2px 2px 3px rgba(166, 255, 0, 0.63);
+    font-size: 25px;
+}
+/*---esta clase se ejecuta con una funcion js*/
+.desplegar_menu{
+    height: 240px;
+}
+.itemDelMenu{
+    display: block;
+    margin: 10px;
+    padding: 0;
+    background: rgba(166, 255, 0, 0.63);
+    /*esta linea coloca una sombra*/
+    box-shadow: -2px 2px 3px white;
+    font-size: 25px;
+    
+}
+/*----baner-----*/
+.baner{
+    margin-top: -75px;
+    position: relative;
+}
+.imgBaner{
+    width: 100%;
+    height: 600px;
+    /*esta linea de codigo no permite que se desfigure la imagen*/
+    object-fit: cover;
+}
+.baner:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.562);
+    z-index: 400;
+
+}
+.contenido-baner{
+    top: 40%;
+    z-index: 450;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+/*-----------main-----------------*/
+.titulo{
+    font-family: cursive;
+    font-size: 35px;
+    padding-top: 20px;
+    text-align: center;
+    margin: 15px;
+    color: blanchedalmond;
+
+}
+.cont_{
+    background: rgb(166, 255, 0);
+    width: 100%;
+    margin-top: 2em;
+}
+.parrafo{
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+/*--------contenido-------*/
+.elemnto{
+    padding: 7px;
+    border: solid 2px rgba(0, 0, 0, 0.39);
+    margin: 20px 7px ;
+    border-radius: 5%;
+    background: rgba(128, 128, 128, 0.336);
+}
+.imagen-elemento{
+    object-fit: cover;
+    width: 90%;
+    padding: 1em;
+    border-radius: 2em;
+    /*esta linea coloca una sombra*/
+    box-shadow: -2px 2px 3px rgb(166, 255, 0);
+}
+.pa{
+    margin: 5px;
+    margin-bottom: 40px;
+    text-align: justify;
+    line-height: 25px;
+    font-family: monospace 12;
+}
+.btn-elemento{
+    background: rgb(166, 255, 0);
+    margin-left: 40%;
+    border-radius: 2em;
+    padding: 10px;
+    /*esta linea coloca una sombra*/
+    box-shadow: -2px 2px 3px black;   
+}
+.btn-elemento:hover{
+    background: rgba(166, 255, 0, 0.411);
+    font: bold;
+}
+.Q_ultimo{
+
+}
+.Q_ultimo-img{
+    display: none;
+}
+/*--------------footer----------------*/
+.flex-33{
+    width: 33%;
+    display: inline;
+    
+}
+.titulo-footer{
+    color: white;
+    padding: 1em;
+    text-align: center;
+    font-size: 18px;
+}
+.footer{
+    margin-top: 4em;
+    background: rgba(0, 0, 0, 0.603);
+}
+.parrafo-footer{
+    padding: 1em;
+    color: white;
+}
+.parrafo-footer-icono{
+    color: white;
+}
+.footer [class*="icono-"]:before{
+    font-size: 60px;
+    line-height: 100px;
+}
+/*----------responsive----------*/
+@media(min-width:400px){
+    .contacto{
+        font-size: 40px;
+    }
+    .contenido-baner{
+        font-size: 30px;
+    }
+}
+
+@media(min-width:700px){
+    .Lista-menu-a{
+        font-size: 30px;
+    }
+    .desplegar_menu{
+         height: 300px;
+    }
+}
+@media(min-width:750px){
+    .imagen-elemento{
+        display: inline;
+    }
+    .elemnto{
+        width: 45%;
+        display: inline-block;
+    }
+    .contenido{
+        width: 100%;
+        
+    }
+    .ultimo{
+        
+        align-self: flex-end;
+        width: 100%;
+    }
+    .Q_ultimo{
+        /*flex-grow: 3;*/
+        width: 70%;
+    }
+    .Q_ultimo-img{
+        flex-grow: 4;
+        display:block;
+        /*object-fit: cover;*/
+        width: 250px;
+    }
+    .pa{
+        padding: 15px;
+    }
+}
+@media(min-width: 1200px){
+    .elemnto{
+        width: 30%;
+    }
+}
+@media(min-width: 850px){
+    .icono-menu{
+        display: none;
+    }
+    .Lista-menu{
+        flex-direction: row;
+        padding: 0 7px 0 7px;
+        top: auto;
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        justify-content: space-between;
+        width: 75%;
+        background: none;
+        
+    }
+    .itemDelMenu{
+        background: rgba(166, 255, 0, 0.082);
+        margin: 10px;
+    }
+    .itemDelMenu:hover{
+        background: rgb(166, 255, 0);
+    }
+    .icono-redes{
+        flex-grow: 60;
+    }
+    .seleccionado{
+        height: 30px;
+        margin: 10px;
+        box-shadow: -2px 2px black ;
+    }
+    .menu{
+        
+        
+    }
+    
+}

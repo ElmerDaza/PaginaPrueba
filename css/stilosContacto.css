@@ -1,0 +1,293 @@
+*{
+    margin:-0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    margin: 10px; 
+    color: black;
+}
+body{
+    
+
+    margin: 0px;
+    padding: 0px;
+    background-image: url(../img/Pintura.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+
+main{
+    
+    background: white;
+    width: 100%;
+    margin: 0px ;
+    margin-right: 0px;
+    padding: 15px 0 0 0;
+    
+    
+}
+main .flex50{
+    width: 98%;
+    display: block;
+}
+main .flex50 [class*= icono-]::before{
+    font-size: 30px;
+    padding: 15px;
+    margin-top: 10px;
+    /*esta linea cambia el cursor a la manito*/
+    cursor: pointer;
+}
+main .titulo{
+    margin-top: 25px;
+}
+main .main-div{
+    padding: 1em;
+    
+}
+.logo{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.flex{
+    display: flex;
+}
+.flex50{
+    width: 50%;
+}
+.contacto{
+    justify-content: flex-end;
+    /*esta linea especifica la altura a la que se coloca el texto o el elemento*/
+    line-height: 60px;
+}
+.icono-menu{
+    /*esta linea especifica la altura a la que se coloca el texto o el elemento*/
+    line-height: 35px;
+    margin: 15px;
+    /*esta linea cambia el cursor a la manito*/
+    cursor: pointer;
+}
+.icono-redes{
+    font-size: 40px;
+    display: inline;
+    
+}
+.icono-redes [class*="icono-"]:before{
+    line-height: 55px;
+    border-radius: 7em;
+    padding: 7px;
+    /*esta linea cambia el cursor a la manito*/
+    cursor: pointer;
+    
+}
+.menu{
+    margin: 0;
+    z-index: 500;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(166, 255, 0, 0.63);
+    
+}
+/*--------------Lista del menu-------------*/
+.Lista-menu{
+    flex-direction: column;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: #000000b2;
+    text-align: center;
+    /*estas dos lineas es para desaparecer el menu*/
+    height: 0;
+    overflow: hidden;
+    /*esta linea crea una animacion*/
+    transition: 1.2s cubic-bezier(0.2, 4, 0.1756, 1);
+}
+.seleccionado{
+    background-color: white;
+    display: block;
+    margin: 10px;
+    padding: 0;
+    /*esta linea coloca una sombra*/
+    box-shadow: -2px 2px 3px rgba(166, 255, 0, 0.63);
+    font-size: 25px;
+}
+/*---esta clase se ejecuta con una funcion js*/
+.desplegar_menu{
+    height: 240px;
+}
+.itemDelMenu{
+    display: block;
+    margin: 10px;
+    padding: 0;
+    background: rgba(166, 255, 0, 0.63);
+    /*esta linea coloca una sombra*/
+    box-shadow: -2px 2px 3px white;
+    font-size: 25px;
+    
+}
+/*-----------------------baner-----------------------*/
+.baner{
+    height: 370px;
+    width: 100%;
+}
+.baner-h2{
+    height: 100%;
+    line-height: 190px;
+}
+.contenido-baner{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+/*----------contenido-----------*/
+.titulo{
+    font-family: cursive;
+    font-size: 45px;
+    padding: 1rem;
+    text-align: center;
+    margin: 15px;
+    color: blanchedalmond;
+    background: rgb(166, 255, 0);
+
+}
+.flex50 p{
+    padding: 10px 0 15px 0;
+}
+.titulo-contenido{
+    text-align: center;
+    padding: 15px;
+}
+.formulario_input{
+ width: 96%;
+ height: 2em;
+ border: solid 2px;
+ box-shadow: -4px 4px 3px;
+ margin: 5px 0;
+}
+.formulario_label{
+
+}
+.formulario_txt{
+    width: 95%;
+   
+    border: solid 2px;
+    box-shadow: -4px 4px 3px;
+    margin: 5px 0;
+}
+/*footer*/
+.footer{
+    background: gray;
+    width: 100%;
+    margin: 0px ;
+    margin-right: 0px;
+    
+    
+}
+.footer .flex-33{
+    padding: 15px;
+}
+.footer .flex-33 .titulo-footer{
+    padding: 1em;
+    color: white;
+}
+.footer .flex-33 [class*=icono-]:before{
+    font-size: 60px;
+    /*esta linea cambia el cursor a la manito*/
+    cursor: pointer;
+    line-height: 100px;
+    color: white;
+}
+
+footer p{
+    color: white;
+}
+.flex-33{
+    width: 95%;
+}
+@media(min-width:400px){
+    .contacto{
+        font-size: 40px;
+    }
+    .contenido-baner{
+        font-size: 30px;
+    }
+}
+@media(min-width:700px){
+    .Lista-menu-a{
+        font-size: 30px;
+    }
+    .desplegar_menu{
+         height: 300px;
+    }
+}
+@media(min-width: 850px){
+    .icono-menu{
+        display: none;
+    }
+    .Lista-menu{
+        flex-direction: row;
+        padding: 0 7px 0 7px;
+        top: auto;
+        margin: 0;
+        height: 100%;
+        overflow: auto;
+        position: relative;
+        justify-content: space-between;
+        width: 75%;
+        background: none;
+        
+    }
+    .itemDelMenu{
+        background: rgba(166, 255, 0, 0.082);
+        margin: 10px;
+    }
+    .itemDelMenu:hover{
+        background: rgb(166, 255, 0);
+    }
+    .icono-redes{
+        flex-grow: 60;
+    }
+    .seleccionado{
+        height: 30px;
+        margin: 10px;
+        box-shadow: -2px 2px black ;
+    }
+    main .main-div{
+        display: flex;
+     align-items: center;
+    }
+    .main-div .flex50{
+        display: inline-block;
+        width: 48%;
+        
+    }
+    .main-div p{
+        padding: 20px;
+        font-size: 1.5em;
+    }
+    .footer .flex-33{
+        width: 28%;
+        display: inline;
+    }
+    
+}
+@media(min-width: 1195px){
+    body{
+        background-size: 1900px 900px;
+    }
+}
